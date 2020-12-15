@@ -29,7 +29,6 @@ app.get('/', (req, res) => {
         results
       });
  });
-s 
  app.get('https://www.techmeme.com/',(error, response, html) => {
   if (!error && response.statusCode == 200) {
     const $ = cheerio.load(html);
@@ -53,8 +52,7 @@ s
   const error = new Error ('Not found');
   res.status(404);
   next(error);
-  });
-});       
+  });      
 app.use((error, req, res, next) => {
   res.status('res.statusCode || 500');
   res.json({
